@@ -1,0 +1,105 @@
+---
+title: "DSC640 Week 1-2 Assignment"
+author: "Amie Davis"
+date: "10 September, 2020"
+output:
+  html_notebook: default
+---
+
+# Load the data into a data frame
+```{r}
+#install.packages("readxl")
+library(readxl)
+
+# Hot Dog Contest Winners
+hdw_df <- read_excel("ex1-2_datasets/hotdog-contest-winners.xlsm")
+head(hdw_df)
+
+# Hot Dog Contest Placements
+hdp_df = read_excel("ex1-2_datasets/hotdog-places.xlsm")
+head(hdp_df)
+
+# Obama Approval Ratings
+ob_df <- read_excel("ex1-2_datasets/obama-approval-ratings.xls")
+head(ob_df)
+```
+
+# Show data structure
+```{r}
+
+# Rename fields w/ spaces
+names(hdw_df)[names(hdw_df) == "Dogs eaten"] <- "Dogs_eaten"
+names(hdw_df)[names(hdw_df) == "New record"] <- "New_record"
+str(hdw_df)
+
+```
+
+# Plot graphs using plotly
+
+# Bar graph
+```{r}
+#install.packages("plotly")
+library(plotly)
+fig <- plot_ly(
+  hdw_df, 
+  y = ~Year, 
+  x = ~Dogs_eaten, 
+  type = 'bar', 
+  orientation = 'h'
+  )
+
+# Add titles
+fig <- fig %>% layout(title = "Hot Dogs Eaten",
+                      xaxis = list(title = "Numbers Hot Dogs Eaten"),
+                      yaxis = list(title = "Year"))
+
+fig
+```
+# Stacked Bar graph
+
+```{r}
+fig <- plot_ly(
+  hdp_df, 
+  x = ~colnames(hdp_df),     #Year
+  y = ~matrix(hdp_df[1,]),   #1st place amounts
+  type = 'bar', 
+  orientation = 'v',
+  name = "1st")
+
+fig <- fig %>% add_trace(y = ~matrix(hdp_df[2,]), name = "2nd")
+fig <- fig %>% add_trace(y = ~matrix(hdp_df[3,]), name = "3rd")
+
+# Add titles & stacks
+fig <- fig %>% layout(title = "Hot Dogs Eaten By Placement",
+                      yaxis = list(title = "Numbers Hot Dogs Eaten"),
+                      xaxis = list(title = "Year"),
+                      barmode = 'stack')
+
+fig
+```
+
+# Pie graph
+```{r}
+
+fig <- plot_ly(ob_df, labels = ~Issue, values = ~Approve, type = "pie")
+fig <- fig %>% layout(title = 'Obama Approval By Issue',
+         xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
+         yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
+
+fig
+```
+
+ # Donut graph
+```{r}
+
+fig <- plot_ly(ob_df, labels = ~Issue, values = ~Approve)
+
+# Add hole to make donut
+fig <- fig %>% add_pie(hole = 0.6)
+
+fig <- fig %>% layout(title = 'Obama Approval By Issue',
+         xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
+         yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
+
+fig
+```
