@@ -1,0 +1,60 @@
+---
+title: "DSC640 Week 3-4 Assignment"
+author: "Amie Davis"
+date: "20 September, 2020"
+output:
+  html_document:
+    df_print: paged
+  html_notebook: default
+---
+
+# Load the data into a data frame
+```{r}
+#install.packages("readxl")
+library(readxl)
+
+# World Population
+wpop_df <- read_excel("ex2-2/world-population.xlsm")
+head(wpop_df)
+```
+
+# Plot graphs using plotly
+
+# Line chart
+```{r message=FALSE}
+#install.packages("plotly")
+library(plotly)
+
+fig <- plot_ly(
+  wpop_df, 
+  x = ~Year, 
+  y = ~Population, 
+  type = 'scatter', 
+  mode = 'lines')
+
+# Add titles & axis
+fig <- fig %>% layout(title = "World Population",
+                      xaxis = list(title = "Year"),
+                      
+                      # Set y axis scale to start at 0
+                      yaxis = list(title = "Population (Billions)", range = c(0, 7000000000)))
+
+fig
+```
+# Step chart
+```{r message=FALSE}
+#install.packages("plotly")
+library(plotly)
+
+# Note hv shape indicates horizontal/vertical steps
+fig <- plot_ly(wpop_df, x = ~Year) 
+fig <- fig %>% add_lines(y = ~Population + 100000, name = "step", line = list(shape = "hv"))
+
+# Add titles
+fig <- fig %>% layout(title = "World Population",
+                      xaxis = list(title = "Year"),
+                      yaxis = list(title = "Population (Billions)", range = c(0, 7000000000)))
+
+
+fig
+```
