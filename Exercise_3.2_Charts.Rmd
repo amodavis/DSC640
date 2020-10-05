@@ -1,0 +1,67 @@
+---
+title: "DSC640 Week 5-6 Assignment"
+author: "Amie Davis"
+date: "4 October, 2020"
+output:
+  word_document: default
+  html_notebook: default
+  html_document:
+    df_print: paged
+---
+
+# Load the data into a data frame
+```{r}
+#install.packages("readr")
+library(readr)
+
+# Expenditures
+exp_df <- read_tsv("ex3-3/expenditures.txt")
+head(exp_df)
+
+# Unemployment Rates
+emp_df <- read_csv("ex3-3/unemployement-rate-1948-2010.csv")
+head(emp_df)
+```
+
+# Tree map
+```{r message=FALSE}
+
+# Reinstall updated htmltools package
+#install.packages("htmltools")
+
+# Install treemap package
+#install.packages("treemap")
+library(treemap)
+
+treemap(exp_df,index = c("category"),vSize ="expenditure",title = "Expenditures 1984 to 2008")
+#palette="RdYlGn"
+        #,fontsize.labels = c(10,10))
+```
+
+# Area chart w/ ggplot
+```{r}
+# Load Packages
+library(ggplot2)
+
+emp_df$Yr_Mon = paste(emp_df$Year,emp_df$Period)
+
+# Area chart
+ggplot(emp_df, aes(x=Yr_Mon, y=Value, group = 1)) + 
+  geom_area(fill = "darkblue") +
+  labs(x="Month", y="Rate", title="Unemployment Rates Jan 1948 to Feb 2009") +
+  
+  # Hide x-axis tick marks
+  theme(axis.text.x = element_blank(),
+          axis.ticks = element_blank())
+```
+# Stacked Area chart w/ ggplot
+```{r}
+# Load Packages
+library(ggplot2)
+
+# Stacked Area chart
+# Group by Month
+ggplot(emp_df, aes(x=Year, y=Value, fill=Period)) + 
+  geom_area() +
+  labs(y="Combined Yearly Rate", title="Unemployment Rates 1948 to 2010")
+```
