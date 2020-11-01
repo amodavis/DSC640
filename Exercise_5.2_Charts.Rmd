@@ -1,0 +1,152 @@
+---
+title: "DSC640 Week 9-10 Assignment"
+author: "Amie Davis"
+date: "1 November, 2020"
+output:
+  html_document:
+    df_print: paged
+  html_notebook: default
+  word_document: default
+---
+
+# Load the data into a data frame
+```{r}
+#install.packages("readr")
+library(readr)
+
+# Geo Locations
+geo_df <- read_csv("ex5-2/costcos-geocoded.csv")
+head(geo_df)
+
+# Basketball Stats
+# Set 1st column as row names
+bball_df <- read.csv("ex5-2/ppg2008.csv", row.names = 1)
+head(bball_df)
+```
+
+# 1) Heat Map w/ Plotly
+```{r}
+# Load Packages
+library(plotly)
+
+# Sort dataframe by player name
+bball_df <- bball_df[order(row.names(bball_df), decreasing = TRUE),]
+
+# Normalize Data
+# Necessary to scale each column separately
+
+# a. Define Min-Max normalization function
+min_max_norm <- function(x) {
+    (x - min(x)) / (max(x) - min(x))
+  }
+
+# Apply Min-Max normalization to dataset
+# Retain row names from original dataframe
+bball_norm <- as.data.frame(lapply(bball_df, min_max_norm), row.names = row.names(bball_df))
+
+# b. Convert to matrix
+bball_matrix <- data.matrix(bball_norm)
+
+
+# Heat Map
+# Uses RColorBrewer::brewer.pal.info for Color Scheme Names
+fig <- plot_ly(x = colnames(bball_matrix), y = rownames(bball_matrix),
+               z = bball_matrix, type = "heatmap",
+               colors = "Blues", showscale=FALSE)
+
+# Add titles & stacks
+fig <- fig %>% layout(title = 'NBA Per Game Performance')
+
+fig
+```
+
+# 2) Spatial Chart w/ ggmap
+```{r goog, include=FALSE}
+# Load Packages
+library(ggmap)
+library(ggplot2)
+
+# Using ggmap to use Google maps to display geodetic information.  The API key is passed, but is hidden from Markdown.
+ggmap::register_google(key="AIzaSyC_xHA2f2uNcL0LdfRxlIH0dWTSWu88o3E")
+```
+
+```{r, message=FALSE}
+# Use Nevada coordinates as center to get Hawaii and Alaska in view
+g_map <- ggmap(get_googlemap(
+                  center = c(lon = -116, lat = 39),
+                  zoom = 3, scale = 1,
+                  maptype = "roadmap",
+#                  maptype = "terrain",
+                  color="bw"))
+
+# Build map
+g_map + 
+  
+  # Re-scale to focus on US rectangle
+  scale_y_continuous(limits=c(15, 70)) +
+
+  # Add data points to the map
+  geom_point(data = geo_df, 
+             aes(x=Longitude, y=Latitude),
+             colour = "#369ff7", size = 2, alpha = 0.5) +
+  
+  # Labels
+  labs(title="Addresses") +
+
+  # Remove unneeded elements
+  theme(legend.title = element_blank(),
+        panel.background = element_blank(),
+        axis.title.x=element_blank(),
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.title.y=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.y=element_blank())
+```
+
+# 3) Contour Chart w/ Plotly
+# How does Z change as a function of X and Y? 
+```{r}
+# Load Packages
+library(plotly)
+
+X = bball_df$FGA
+Y = bball_df$FTA
+Z = X**2 + Y**2
+
+# Contour Chart
+fig <- plot_ly(x = bball_df$FGA, y = bball_df$FTA,
+               z = Z,
+               type = "contour", contours = list(showlabels = TRUE), showscale=FALSE,
+               colors = "Blues")
+
+# Add titles & stacks
+fig <- fig %>% layout(title = 'Contour Chart (plotly)',
+                      xaxis = list(title = "Field Goal Attempts", showgrid = FALSE),
+                      yaxis = list(title = "Free Throw Attempts", showgrid = FALSE))
+
+fig
+```
+
+```{r message=FALSE}
+# Load Packages
+library(ggplot2)
+
+X = bball_df$FGA
+Y = bball_df$FTA
+Z = X**2 + Y**2
+
+# Contour Chart
+ggplot(data = bball_df, aes(x=X, y=Y)) +
+    xlim(10.5,22) + ylim(1.5,11) +
+    geom_point(alpha = 0.3, col = "blue") +
+    geom_density2d(alpha = 0.5, color = "black") +
+    ggtitle("Contour Chart (ggplot)") +
+    labs(x="Field Goal Attempts", y="Free Throw Attempts") +
+
+  # Remove unneeded elements
+  theme_bw() +
+  theme(panel.border = element_blank(), 
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+```
