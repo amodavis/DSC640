@@ -1,0 +1,2111 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20203.20.0918.1727                               -->
+<workbook include-phone-layouts='false' original-version='18.1' source-build='2020.3.1 (20203.20.0918.1727)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <IncludePhoneLayoutsOptOut />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <_.fcp.SetMembershipControl.true...SetMembershipControl />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Record_Count' datatype='integer' name='[Parameter 1]' param-domain-type='any' role='measure' type='quantitative' value='764'>
+        <calculation class='tableau' formula='764' />
+      </column>
+    </datasource>
+    <datasource caption='education' inline='true' name='federated.187d6zk1th46pa1fr87351pfejfm' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='education' name='textscan.19388pv03r4rd41h10cbh0irjo4c'>
+            <connection class='textscan' directory='C:/DSC640/Week11-12/ex6-2' filename='education.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.19388pv03r4rd41h10cbh0irjo4c' name='education.csv' table='[education#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='state' ordinal='0' />
+            <column datatype='integer' name='reading' ordinal='1' />
+            <column datatype='integer' name='math' ordinal='2' />
+            <column datatype='integer' name='writing' ordinal='3' />
+            <column datatype='integer' name='percent_graduates_sat' ordinal='4' />
+            <column datatype='real' name='pupil_staff_ratio' ordinal='5' />
+            <column datatype='real' name='dropout_rate' ordinal='6' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.19388pv03r4rd41h10cbh0irjo4c' name='education.csv' table='[education#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='state' ordinal='0' />
+            <column datatype='integer' name='reading' ordinal='1' />
+            <column datatype='integer' name='math' ordinal='2' />
+            <column datatype='integer' name='writing' ordinal='3' />
+            <column datatype='integer' name='percent_graduates_sat' ordinal='4' />
+            <column datatype='real' name='pupil_staff_ratio' ordinal='5' />
+            <column datatype='real' name='dropout_rate' ordinal='6' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[education.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>state</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[state]</local-name>
+            <parent-name>[education.csv]</parent-name>
+            <remote-alias>state</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[education.csv_E83BB029050249F488B2CB9672E00F30]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>reading</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[reading]</local-name>
+            <parent-name>[education.csv]</parent-name>
+            <remote-alias>reading</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[education.csv_E83BB029050249F488B2CB9672E00F30]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>math</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[math]</local-name>
+            <parent-name>[education.csv]</parent-name>
+            <remote-alias>math</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[education.csv_E83BB029050249F488B2CB9672E00F30]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>writing</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[writing]</local-name>
+            <parent-name>[education.csv]</parent-name>
+            <remote-alias>writing</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[education.csv_E83BB029050249F488B2CB9672E00F30]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>percent_graduates_sat</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[percent_graduates_sat]</local-name>
+            <parent-name>[education.csv]</parent-name>
+            <remote-alias>percent_graduates_sat</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[education.csv_E83BB029050249F488B2CB9672E00F30]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pupil_staff_ratio</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[pupil_staff_ratio]</local-name>
+            <parent-name>[education.csv]</parent-name>
+            <remote-alias>pupil_staff_ratio</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[education.csv_E83BB029050249F488B2CB9672E00F30]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dropout_rate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[dropout_rate]</local-name>
+            <parent-name>[education.csv]</parent-name>
+            <remote-alias>dropout_rate</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[education.csv_E83BB029050249F488B2CB9672E00F30]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column aggregation='None' datatype='integer' name='[Reading (bin)]' role='dimension' type='quantitative'>
+        <calculation class='bin' decimals='1' formula='[reading]' peg='0' size='12.3' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='education.csv' datatype='table' name='[__tableau_internal_object_id__].[education.csv_E83BB029050249F488B2CB9672E00F30]' role='measure' type='quantitative' />
+      <column caption='Dropout Rate' datatype='real' name='[dropout_rate]' role='measure' type='quantitative' />
+      <column caption='Math' datatype='integer' name='[math]' role='measure' type='quantitative' />
+      <column caption='Percent Graduates Sat' datatype='integer' name='[percent_graduates_sat]' role='measure' type='quantitative' />
+      <column caption='Pupil Staff Ratio' datatype='real' name='[pupil_staff_ratio]' role='measure' type='quantitative' />
+      <column caption='Reading' datatype='integer' name='[reading]' role='measure' type='quantitative' />
+      <column caption='State' datatype='string' name='[state]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='Writing' datatype='integer' name='[writing]' role='measure' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='education.csv' id='education.csv_E83BB029050249F488B2CB9672E00F30'>
+            <properties context=''>
+              <relation connection='textscan.19388pv03r4rd41h10cbh0irjo4c' name='education.csv' table='[education#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='state' ordinal='0' />
+                  <column datatype='integer' name='reading' ordinal='1' />
+                  <column datatype='integer' name='math' ordinal='2' />
+                  <column datatype='integer' name='writing' ordinal='3' />
+                  <column datatype='integer' name='percent_graduates_sat' ordinal='4' />
+                  <column datatype='real' name='pupil_staff_ratio' ordinal='5' />
+                  <column datatype='real' name='dropout_rate' ordinal='6' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+    <datasource caption='Table 146 (US)' inline='true' name='federated.1dw5wft07tsx6i1927ux21jmp63m' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='tabn146-US' name='excel-direct.1jjvr9808tfcr51fj7fmo1629lv8'>
+            <connection class='excel-direct' cleaning='yes' compat='no' dataRefreshTime='' filename='C:/DSC640/Week11-12/ex6-2/tabn146.xls' interpretationMode='1' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='excel-direct.1jjvr9808tfcr51fj7fmo1629lv8' name='Table 146' table='[&apos;Table 146$&apos;]' type='table'>
+          <columns gridOrigin='A1:R72:no:A1:R72:4' header='yes' lost='0' outcome='1' processed='902'>
+            <column datatype='string' name='State or jurisdiction' ordinal='0' />
+            <column datatype='integer' name='1987-88 Critical reading' ordinal='1' />
+            <column datatype='integer' name='1987-88 Mathe- matics' ordinal='2' />
+            <column datatype='integer' name='1995-96 Critical reading' ordinal='3' />
+            <column datatype='integer' name='1995-96 Mathe- matics' ordinal='4' />
+            <column datatype='integer' name='2000-01 Critical reading' ordinal='5' />
+            <column datatype='integer' name='2000-01 Mathe- matics' ordinal='6' />
+            <column datatype='integer' name='2005-06 Critical reading' ordinal='7' />
+            <column datatype='integer' name='2005-06 Mathe- matics' ordinal='8' />
+            <column datatype='integer' name='2005-06 Writing\2_' ordinal='9' />
+            <column datatype='integer' name='2007-08 Critical reading' ordinal='10' />
+            <column datatype='integer' name='2007-08 Mathe- matics' ordinal='11' />
+            <column datatype='integer' name='2007-08 Writing\2_' ordinal='12' />
+            <column datatype='integer' name='2008-09 Critical reading' ordinal='13' />
+            <column datatype='integer' name='2008-09 Mathe- matics' ordinal='14' />
+            <column datatype='integer' name='2008-09 Writing\2_' ordinal='15' />
+            <column datatype='integer' name='Percent of graduates taking SAT, 2007-08\1_' ordinal='16' />
+            <column datatype='integer' name='Percent of graduates taking SAT, 2008-09\1_' ordinal='17' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='excel-direct.1jjvr9808tfcr51fj7fmo1629lv8' name='Table 146' table='[&apos;Table 146$&apos;]' type='table'>
+          <columns gridOrigin='A1:R72:no:A1:R72:4' header='yes' lost='0' outcome='1' processed='902'>
+            <column datatype='string' name='State or jurisdiction' ordinal='0' />
+            <column datatype='integer' name='1987-88 Critical reading' ordinal='1' />
+            <column datatype='integer' name='1987-88 Mathe- matics' ordinal='2' />
+            <column datatype='integer' name='1995-96 Critical reading' ordinal='3' />
+            <column datatype='integer' name='1995-96 Mathe- matics' ordinal='4' />
+            <column datatype='integer' name='2000-01 Critical reading' ordinal='5' />
+            <column datatype='integer' name='2000-01 Mathe- matics' ordinal='6' />
+            <column datatype='integer' name='2005-06 Critical reading' ordinal='7' />
+            <column datatype='integer' name='2005-06 Mathe- matics' ordinal='8' />
+            <column datatype='integer' name='2005-06 Writing\2_' ordinal='9' />
+            <column datatype='integer' name='2007-08 Critical reading' ordinal='10' />
+            <column datatype='integer' name='2007-08 Mathe- matics' ordinal='11' />
+            <column datatype='integer' name='2007-08 Writing\2_' ordinal='12' />
+            <column datatype='integer' name='2008-09 Critical reading' ordinal='13' />
+            <column datatype='integer' name='2008-09 Mathe- matics' ordinal='14' />
+            <column datatype='integer' name='2008-09 Writing\2_' ordinal='15' />
+            <column datatype='integer' name='Percent of graduates taking SAT, 2007-08\1_' ordinal='16' />
+            <column datatype='integer' name='Percent of graduates taking SAT, 2008-09\1_' ordinal='17' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Table 146]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:R72:no:A1:R72:4&quot;</attribute>
+              <attribute datatype='integer' name='lost'>0</attribute>
+              <attribute datatype='integer' name='outcome'>1</attribute>
+              <attribute datatype='integer' name='processed'>902</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State or jurisdiction</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[State or jurisdiction]</local-name>
+            <parent-name>[Table 146]</parent-name>
+            <remote-alias>State or jurisdiction</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>1987-88 Critical reading</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[1987-88 Critical reading]</local-name>
+            <parent-name>[Table 146]</parent-name>
+            <remote-alias>1987-88 Critical reading</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>1987-88 Mathe- matics</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[1987-88 Mathe- matics]</local-name>
+            <parent-name>[Table 146]</parent-name>
+            <remote-alias>1987-88 Mathe- matics</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>1995-96 Critical reading</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[1995-96 Critical reading]</local-name>
+            <parent-name>[Table 146]</parent-name>
+            <remote-alias>1995-96 Critical reading</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>1995-96 Mathe- matics</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[1995-96 Mathe- matics]</local-name>
+            <parent-name>[Table 146]</parent-name>
+            <remote-alias>1995-96 Mathe- matics</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>2000-01 Critical reading</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[2000-01 Critical reading]</local-name>
+            <parent-name>[Table 146]</parent-name>
+            <remote-alias>2000-01 Critical reading</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>2000-01 Mathe- matics</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[2000-01 Mathe- matics]</local-name>
+            <parent-name>[Table 146]</parent-name>
+            <remote-alias>2000-01 Mathe- matics</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>2005-06 Critical reading</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[2005-06 Critical reading]</local-name>
+            <parent-name>[Table 146]</parent-name>
+            <remote-alias>2005-06 Critical reading</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>2005-06 Mathe- matics</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[2005-06 Mathe- matics]</local-name>
+            <parent-name>[Table 146]</parent-name>
+            <remote-alias>2005-06 Mathe- matics</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>2005-06 Writing\2_</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[2005-06 Writing\2_]</local-name>
+            <parent-name>[Table 146]</parent-name>
+            <remote-alias>2005-06 Writing\2_</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>2007-08 Critical reading</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[2007-08 Critical reading]</local-name>
+            <parent-name>[Table 146]</parent-name>
+            <remote-alias>2007-08 Critical reading</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>2007-08 Mathe- matics</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[2007-08 Mathe- matics]</local-name>
+            <parent-name>[Table 146]</parent-name>
+            <remote-alias>2007-08 Mathe- matics</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>2007-08 Writing\2_</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[2007-08 Writing\2_]</local-name>
+            <parent-name>[Table 146]</parent-name>
+            <remote-alias>2007-08 Writing\2_</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>2008-09 Critical reading</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[2008-09 Critical reading]</local-name>
+            <parent-name>[Table 146]</parent-name>
+            <remote-alias>2008-09 Critical reading</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>2008-09 Mathe- matics</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[2008-09 Mathe- matics]</local-name>
+            <parent-name>[Table 146]</parent-name>
+            <remote-alias>2008-09 Mathe- matics</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>2008-09 Writing\2_</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[2008-09 Writing\2_]</local-name>
+            <parent-name>[Table 146]</parent-name>
+            <remote-alias>2008-09 Writing\2_</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Percent of graduates taking SAT, 2007-08\1_</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Percent of graduates taking SAT, 2007-08\1_]</local-name>
+            <parent-name>[Table 146]</parent-name>
+            <remote-alias>Percent of graduates taking SAT, 2007-08\1_</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Percent of graduates taking SAT, 2008-09\1_</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Percent of graduates taking SAT, 2008-09\1_]</local-name>
+            <parent-name>[Table 146]</parent-name>
+            <remote-alias>Percent of graduates taking SAT, 2008-09\1_</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[1987-88 Critical reading]' role='measure' type='quantitative' />
+      <column datatype='string' name='[State or jurisdiction]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <_.fcp.ObjectModelTableType.true...column caption='Table 146-US' datatype='table' name='[__tableau_internal_object_id__].[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]' role='measure' type='quantitative' />
+      <column-instance column='[1987-88 Critical reading]' derivation='None' name='[none:1987-88 Critical reading:ok]' pivot='key' type='ordinal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:1987-88 Critical reading:ok]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>505</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>540</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <filter class='categorical' column='[State or jurisdiction]' filter-group='2'>
+        <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+          <groupfilter function='member' level='[State or jurisdiction]' member='&quot;   United States .....&quot;' />
+          <groupfilter function='member' level='[State or jurisdiction]' member='&quot;Illinois ......................&quot;' />
+        </groupfilter>
+      </filter>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Table 146-US' id='Table 146_BCEF6FD6B03C47C799C78A1A376468E0'>
+            <properties context=''>
+              <relation connection='excel-direct.1jjvr9808tfcr51fj7fmo1629lv8' name='Table 146' table='[&apos;Table 146$&apos;]' type='table'>
+                <columns gridOrigin='A1:R72:no:A1:R72:4' header='yes' lost='0' outcome='1' processed='902'>
+                  <column datatype='string' name='State or jurisdiction' ordinal='0' />
+                  <column datatype='integer' name='1987-88 Critical reading' ordinal='1' />
+                  <column datatype='integer' name='1987-88 Mathe- matics' ordinal='2' />
+                  <column datatype='integer' name='1995-96 Critical reading' ordinal='3' />
+                  <column datatype='integer' name='1995-96 Mathe- matics' ordinal='4' />
+                  <column datatype='integer' name='2000-01 Critical reading' ordinal='5' />
+                  <column datatype='integer' name='2000-01 Mathe- matics' ordinal='6' />
+                  <column datatype='integer' name='2005-06 Critical reading' ordinal='7' />
+                  <column datatype='integer' name='2005-06 Mathe- matics' ordinal='8' />
+                  <column datatype='integer' name='2005-06 Writing\2_' ordinal='9' />
+                  <column datatype='integer' name='2007-08 Critical reading' ordinal='10' />
+                  <column datatype='integer' name='2007-08 Mathe- matics' ordinal='11' />
+                  <column datatype='integer' name='2007-08 Writing\2_' ordinal='12' />
+                  <column datatype='integer' name='2008-09 Critical reading' ordinal='13' />
+                  <column datatype='integer' name='2008-09 Mathe- matics' ordinal='14' />
+                  <column datatype='integer' name='2008-09 Writing\2_' ordinal='15' />
+                  <column datatype='integer' name='Percent of graduates taking SAT, 2007-08\1_' ordinal='16' />
+                  <column datatype='integer' name='Percent of graduates taking SAT, 2008-09\1_' ordinal='17' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+    <datasource caption='Table 146' inline='true' name='federated.1dw5wft07tsx6i1927ux21jmp63m (copy)' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='tabn146' name='excel-direct.1jjvr9808tfcr51fj7fmo1629lv8 (copy)'>
+            <connection class='excel-direct' cleaning='yes' compat='no' dataRefreshTime='' filename='C:/DSC640/Week11-12/ex6-2/tabn146.xls' interpretationMode='1' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation join='full' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[Table 146].[State or jurisdiction]' />
+              <expression op='[Table 1461].[State or jurisdiction]' />
+            </expression>
+          </clause>
+          <relation connection='excel-direct.1jjvr9808tfcr51fj7fmo1629lv8 (copy)' name='Table 146' table='[&apos;Table 146$&apos;]' type='table'>
+            <columns gridOrigin='A1:R72:no:A1:R72:4' header='yes' lost='0' outcome='1' processed='902'>
+              <column datatype='string' name='State or jurisdiction' ordinal='0' />
+              <column datatype='integer' name='1987-88 Critical reading' ordinal='1' />
+              <column datatype='integer' name='1987-88 Mathe- matics' ordinal='2' />
+              <column datatype='integer' name='1995-96 Critical reading' ordinal='3' />
+              <column datatype='integer' name='1995-96 Mathe- matics' ordinal='4' />
+              <column datatype='integer' name='2000-01 Critical reading' ordinal='5' />
+              <column datatype='integer' name='2000-01 Mathe- matics' ordinal='6' />
+              <column datatype='integer' name='2005-06 Critical reading' ordinal='7' />
+              <column datatype='integer' name='2005-06 Mathe- matics' ordinal='8' />
+              <column datatype='integer' name='2005-06 Writing\2_' ordinal='9' />
+              <column datatype='integer' name='2007-08 Critical reading' ordinal='10' />
+              <column datatype='integer' name='2007-08 Mathe- matics' ordinal='11' />
+              <column datatype='integer' name='2007-08 Writing\2_' ordinal='12' />
+              <column datatype='integer' name='2008-09 Critical reading' ordinal='13' />
+              <column datatype='integer' name='2008-09 Mathe- matics' ordinal='14' />
+              <column datatype='integer' name='2008-09 Writing\2_' ordinal='15' />
+              <column datatype='integer' name='Percent of graduates taking SAT, 2007-08\1_' ordinal='16' />
+              <column datatype='integer' name='Percent of graduates taking SAT, 2008-09\1_' ordinal='17' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.1jjvr9808tfcr51fj7fmo1629lv8 (copy)' name='Table 1461' table='[&apos;Table 146$&apos;]' type='table'>
+            <columns gridOrigin='A1:R72:no:A1:R72:4' header='yes' lost='0' outcome='1' processed='902'>
+              <column datatype='string' name='State or jurisdiction' ordinal='0' />
+              <column datatype='integer' name='1987-88 Critical reading' ordinal='1' />
+              <column datatype='integer' name='1987-88 Mathe- matics' ordinal='2' />
+              <column datatype='integer' name='1995-96 Critical reading' ordinal='3' />
+              <column datatype='integer' name='1995-96 Mathe- matics' ordinal='4' />
+              <column datatype='integer' name='2000-01 Critical reading' ordinal='5' />
+              <column datatype='integer' name='2000-01 Mathe- matics' ordinal='6' />
+              <column datatype='integer' name='2005-06 Critical reading' ordinal='7' />
+              <column datatype='integer' name='2005-06 Mathe- matics' ordinal='8' />
+              <column datatype='integer' name='2005-06 Writing\2_' ordinal='9' />
+              <column datatype='integer' name='2007-08 Critical reading' ordinal='10' />
+              <column datatype='integer' name='2007-08 Mathe- matics' ordinal='11' />
+              <column datatype='integer' name='2007-08 Writing\2_' ordinal='12' />
+              <column datatype='integer' name='2008-09 Critical reading' ordinal='13' />
+              <column datatype='integer' name='2008-09 Mathe- matics' ordinal='14' />
+              <column datatype='integer' name='2008-09 Writing\2_' ordinal='15' />
+              <column datatype='integer' name='Percent of graduates taking SAT, 2007-08\1_' ordinal='16' />
+              <column datatype='integer' name='Percent of graduates taking SAT, 2008-09\1_' ordinal='17' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation join='full' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[Table 146].[State or jurisdiction]' />
+              <expression op='[Table 1461].[State or jurisdiction]' />
+            </expression>
+          </clause>
+          <relation connection='excel-direct.1jjvr9808tfcr51fj7fmo1629lv8 (copy)' name='Table 146' table='[&apos;Table 146$&apos;]' type='table'>
+            <columns gridOrigin='A1:R72:no:A1:R72:4' header='yes' lost='0' outcome='1' processed='902'>
+              <column datatype='string' name='State or jurisdiction' ordinal='0' />
+              <column datatype='integer' name='1987-88 Critical reading' ordinal='1' />
+              <column datatype='integer' name='1987-88 Mathe- matics' ordinal='2' />
+              <column datatype='integer' name='1995-96 Critical reading' ordinal='3' />
+              <column datatype='integer' name='1995-96 Mathe- matics' ordinal='4' />
+              <column datatype='integer' name='2000-01 Critical reading' ordinal='5' />
+              <column datatype='integer' name='2000-01 Mathe- matics' ordinal='6' />
+              <column datatype='integer' name='2005-06 Critical reading' ordinal='7' />
+              <column datatype='integer' name='2005-06 Mathe- matics' ordinal='8' />
+              <column datatype='integer' name='2005-06 Writing\2_' ordinal='9' />
+              <column datatype='integer' name='2007-08 Critical reading' ordinal='10' />
+              <column datatype='integer' name='2007-08 Mathe- matics' ordinal='11' />
+              <column datatype='integer' name='2007-08 Writing\2_' ordinal='12' />
+              <column datatype='integer' name='2008-09 Critical reading' ordinal='13' />
+              <column datatype='integer' name='2008-09 Mathe- matics' ordinal='14' />
+              <column datatype='integer' name='2008-09 Writing\2_' ordinal='15' />
+              <column datatype='integer' name='Percent of graduates taking SAT, 2007-08\1_' ordinal='16' />
+              <column datatype='integer' name='Percent of graduates taking SAT, 2008-09\1_' ordinal='17' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.1jjvr9808tfcr51fj7fmo1629lv8 (copy)' name='Table 1461' table='[&apos;Table 146$&apos;]' type='table'>
+            <columns gridOrigin='A1:R72:no:A1:R72:4' header='yes' lost='0' outcome='1' processed='902'>
+              <column datatype='string' name='State or jurisdiction' ordinal='0' />
+              <column datatype='integer' name='1987-88 Critical reading' ordinal='1' />
+              <column datatype='integer' name='1987-88 Mathe- matics' ordinal='2' />
+              <column datatype='integer' name='1995-96 Critical reading' ordinal='3' />
+              <column datatype='integer' name='1995-96 Mathe- matics' ordinal='4' />
+              <column datatype='integer' name='2000-01 Critical reading' ordinal='5' />
+              <column datatype='integer' name='2000-01 Mathe- matics' ordinal='6' />
+              <column datatype='integer' name='2005-06 Critical reading' ordinal='7' />
+              <column datatype='integer' name='2005-06 Mathe- matics' ordinal='8' />
+              <column datatype='integer' name='2005-06 Writing\2_' ordinal='9' />
+              <column datatype='integer' name='2007-08 Critical reading' ordinal='10' />
+              <column datatype='integer' name='2007-08 Mathe- matics' ordinal='11' />
+              <column datatype='integer' name='2007-08 Writing\2_' ordinal='12' />
+              <column datatype='integer' name='2008-09 Critical reading' ordinal='13' />
+              <column datatype='integer' name='2008-09 Mathe- matics' ordinal='14' />
+              <column datatype='integer' name='2008-09 Writing\2_' ordinal='15' />
+              <column datatype='integer' name='Percent of graduates taking SAT, 2007-08\1_' ordinal='16' />
+              <column datatype='integer' name='Percent of graduates taking SAT, 2008-09\1_' ordinal='17' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[1987-88 Critical reading (Table 1461)]' value='[Table 1461].[1987-88 Critical reading]' />
+          <map key='[1987-88 Critical reading]' value='[Table 146].[1987-88 Critical reading]' />
+          <map key='[1987-88 Mathe- matics (Table 1461)]' value='[Table 1461].[1987-88 Mathe- matics]' />
+          <map key='[1987-88 Mathe- matics]' value='[Table 146].[1987-88 Mathe- matics]' />
+          <map key='[1995-96 Critical reading (Table 1461)]' value='[Table 1461].[1995-96 Critical reading]' />
+          <map key='[1995-96 Critical reading]' value='[Table 146].[1995-96 Critical reading]' />
+          <map key='[1995-96 Mathe- matics (Table 1461)]' value='[Table 1461].[1995-96 Mathe- matics]' />
+          <map key='[1995-96 Mathe- matics]' value='[Table 146].[1995-96 Mathe- matics]' />
+          <map key='[2000-01 Critical reading (Table 1461)]' value='[Table 1461].[2000-01 Critical reading]' />
+          <map key='[2000-01 Critical reading]' value='[Table 146].[2000-01 Critical reading]' />
+          <map key='[2000-01 Mathe- matics (Table 1461)]' value='[Table 1461].[2000-01 Mathe- matics]' />
+          <map key='[2000-01 Mathe- matics]' value='[Table 146].[2000-01 Mathe- matics]' />
+          <map key='[2005-06 Critical reading (Table 1461)]' value='[Table 1461].[2005-06 Critical reading]' />
+          <map key='[2005-06 Critical reading]' value='[Table 146].[2005-06 Critical reading]' />
+          <map key='[2005-06 Mathe- matics (Table 1461)]' value='[Table 1461].[2005-06 Mathe- matics]' />
+          <map key='[2005-06 Mathe- matics]' value='[Table 146].[2005-06 Mathe- matics]' />
+          <map key='[2005-06 Writing\2_ (Table 1461)]' value='[Table 1461].[2005-06 Writing\2_]' />
+          <map key='[2005-06 Writing\2_]' value='[Table 146].[2005-06 Writing\2_]' />
+          <map key='[2007-08 Critical reading (Table 1461)]' value='[Table 1461].[2007-08 Critical reading]' />
+          <map key='[2007-08 Critical reading]' value='[Table 146].[2007-08 Critical reading]' />
+          <map key='[2007-08 Mathe- matics (Table 1461)]' value='[Table 1461].[2007-08 Mathe- matics]' />
+          <map key='[2007-08 Mathe- matics]' value='[Table 146].[2007-08 Mathe- matics]' />
+          <map key='[2007-08 Writing\2_ (Table 1461)]' value='[Table 1461].[2007-08 Writing\2_]' />
+          <map key='[2007-08 Writing\2_]' value='[Table 146].[2007-08 Writing\2_]' />
+          <map key='[2008-09 Critical reading (Table 1461)]' value='[Table 1461].[2008-09 Critical reading]' />
+          <map key='[2008-09 Critical reading]' value='[Table 146].[2008-09 Critical reading]' />
+          <map key='[2008-09 Mathe- matics (Table 1461)]' value='[Table 1461].[2008-09 Mathe- matics]' />
+          <map key='[2008-09 Mathe- matics]' value='[Table 146].[2008-09 Mathe- matics]' />
+          <map key='[2008-09 Writing\2_ (Table 1461)]' value='[Table 1461].[2008-09 Writing\2_]' />
+          <map key='[2008-09 Writing\2_]' value='[Table 146].[2008-09 Writing\2_]' />
+          <map key='[Percent of graduates taking SAT, 2007-08\1_ (Table 1461)]' value='[Table 1461].[Percent of graduates taking SAT, 2007-08\1_]' />
+          <map key='[Percent of graduates taking SAT, 2007-08\1_]' value='[Table 146].[Percent of graduates taking SAT, 2007-08\1_]' />
+          <map key='[Percent of graduates taking SAT, 2008-09\1_ (Table 1461)]' value='[Table 1461].[Percent of graduates taking SAT, 2008-09\1_]' />
+          <map key='[Percent of graduates taking SAT, 2008-09\1_]' value='[Table 146].[Percent of graduates taking SAT, 2008-09\1_]' />
+          <map key='[State or jurisdiction (Table 1461)]' value='[Table 1461].[State or jurisdiction]' />
+          <map key='[State or jurisdiction]' value='[Table 146].[State or jurisdiction]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Table 146]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:R72:no:A1:R72:4&quot;</attribute>
+              <attribute datatype='integer' name='lost'>0</attribute>
+              <attribute datatype='integer' name='outcome'>1</attribute>
+              <attribute datatype='integer' name='processed'>902</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Table 1461]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:R72:no:A1:R72:4&quot;</attribute>
+              <attribute datatype='integer' name='lost'>0</attribute>
+              <attribute datatype='integer' name='outcome'>1</attribute>
+              <attribute datatype='integer' name='processed'>902</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State or jurisdiction</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[State or jurisdiction]</local-name>
+            <parent-name>[Table 146]</parent-name>
+            <remote-alias>State or jurisdiction</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>1987-88 Critical reading</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[1987-88 Critical reading]</local-name>
+            <parent-name>[Table 146]</parent-name>
+            <remote-alias>1987-88 Critical reading</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>1987-88 Mathe- matics</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[1987-88 Mathe- matics]</local-name>
+            <parent-name>[Table 146]</parent-name>
+            <remote-alias>1987-88 Mathe- matics</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>1995-96 Critical reading</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[1995-96 Critical reading]</local-name>
+            <parent-name>[Table 146]</parent-name>
+            <remote-alias>1995-96 Critical reading</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>1995-96 Mathe- matics</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[1995-96 Mathe- matics]</local-name>
+            <parent-name>[Table 146]</parent-name>
+            <remote-alias>1995-96 Mathe- matics</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>2000-01 Critical reading</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[2000-01 Critical reading]</local-name>
+            <parent-name>[Table 146]</parent-name>
+            <remote-alias>2000-01 Critical reading</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>2000-01 Mathe- matics</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[2000-01 Mathe- matics]</local-name>
+            <parent-name>[Table 146]</parent-name>
+            <remote-alias>2000-01 Mathe- matics</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>2005-06 Critical reading</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[2005-06 Critical reading]</local-name>
+            <parent-name>[Table 146]</parent-name>
+            <remote-alias>2005-06 Critical reading</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>2005-06 Mathe- matics</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[2005-06 Mathe- matics]</local-name>
+            <parent-name>[Table 146]</parent-name>
+            <remote-alias>2005-06 Mathe- matics</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>2005-06 Writing\2_</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[2005-06 Writing\2_]</local-name>
+            <parent-name>[Table 146]</parent-name>
+            <remote-alias>2005-06 Writing\2_</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>2007-08 Critical reading</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[2007-08 Critical reading]</local-name>
+            <parent-name>[Table 146]</parent-name>
+            <remote-alias>2007-08 Critical reading</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>2007-08 Mathe- matics</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[2007-08 Mathe- matics]</local-name>
+            <parent-name>[Table 146]</parent-name>
+            <remote-alias>2007-08 Mathe- matics</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>2007-08 Writing\2_</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[2007-08 Writing\2_]</local-name>
+            <parent-name>[Table 146]</parent-name>
+            <remote-alias>2007-08 Writing\2_</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>2008-09 Critical reading</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[2008-09 Critical reading]</local-name>
+            <parent-name>[Table 146]</parent-name>
+            <remote-alias>2008-09 Critical reading</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>2008-09 Mathe- matics</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[2008-09 Mathe- matics]</local-name>
+            <parent-name>[Table 146]</parent-name>
+            <remote-alias>2008-09 Mathe- matics</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>2008-09 Writing\2_</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[2008-09 Writing\2_]</local-name>
+            <parent-name>[Table 146]</parent-name>
+            <remote-alias>2008-09 Writing\2_</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Percent of graduates taking SAT, 2007-08\1_</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Percent of graduates taking SAT, 2007-08\1_]</local-name>
+            <parent-name>[Table 146]</parent-name>
+            <remote-alias>Percent of graduates taking SAT, 2007-08\1_</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Percent of graduates taking SAT, 2008-09\1_</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Percent of graduates taking SAT, 2008-09\1_]</local-name>
+            <parent-name>[Table 146]</parent-name>
+            <remote-alias>Percent of graduates taking SAT, 2008-09\1_</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State or jurisdiction</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[State or jurisdiction (Table 1461)]</local-name>
+            <parent-name>[Table 1461]</parent-name>
+            <remote-alias>State or jurisdiction</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>1987-88 Critical reading</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[1987-88 Critical reading (Table 1461)]</local-name>
+            <parent-name>[Table 1461]</parent-name>
+            <remote-alias>1987-88 Critical reading</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>1987-88 Mathe- matics</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[1987-88 Mathe- matics (Table 1461)]</local-name>
+            <parent-name>[Table 1461]</parent-name>
+            <remote-alias>1987-88 Mathe- matics</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>1995-96 Critical reading</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[1995-96 Critical reading (Table 1461)]</local-name>
+            <parent-name>[Table 1461]</parent-name>
+            <remote-alias>1995-96 Critical reading</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>1995-96 Mathe- matics</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[1995-96 Mathe- matics (Table 1461)]</local-name>
+            <parent-name>[Table 1461]</parent-name>
+            <remote-alias>1995-96 Mathe- matics</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>2000-01 Critical reading</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[2000-01 Critical reading (Table 1461)]</local-name>
+            <parent-name>[Table 1461]</parent-name>
+            <remote-alias>2000-01 Critical reading</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>2000-01 Mathe- matics</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[2000-01 Mathe- matics (Table 1461)]</local-name>
+            <parent-name>[Table 1461]</parent-name>
+            <remote-alias>2000-01 Mathe- matics</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>2005-06 Critical reading</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[2005-06 Critical reading (Table 1461)]</local-name>
+            <parent-name>[Table 1461]</parent-name>
+            <remote-alias>2005-06 Critical reading</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>2005-06 Mathe- matics</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[2005-06 Mathe- matics (Table 1461)]</local-name>
+            <parent-name>[Table 1461]</parent-name>
+            <remote-alias>2005-06 Mathe- matics</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>2005-06 Writing\2_</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[2005-06 Writing\2_ (Table 1461)]</local-name>
+            <parent-name>[Table 1461]</parent-name>
+            <remote-alias>2005-06 Writing\2_</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>2007-08 Critical reading</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[2007-08 Critical reading (Table 1461)]</local-name>
+            <parent-name>[Table 1461]</parent-name>
+            <remote-alias>2007-08 Critical reading</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>2007-08 Mathe- matics</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[2007-08 Mathe- matics (Table 1461)]</local-name>
+            <parent-name>[Table 1461]</parent-name>
+            <remote-alias>2007-08 Mathe- matics</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>2007-08 Writing\2_</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[2007-08 Writing\2_ (Table 1461)]</local-name>
+            <parent-name>[Table 1461]</parent-name>
+            <remote-alias>2007-08 Writing\2_</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>2008-09 Critical reading</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[2008-09 Critical reading (Table 1461)]</local-name>
+            <parent-name>[Table 1461]</parent-name>
+            <remote-alias>2008-09 Critical reading</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>2008-09 Mathe- matics</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[2008-09 Mathe- matics (Table 1461)]</local-name>
+            <parent-name>[Table 1461]</parent-name>
+            <remote-alias>2008-09 Mathe- matics</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>2008-09 Writing\2_</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[2008-09 Writing\2_ (Table 1461)]</local-name>
+            <parent-name>[Table 1461]</parent-name>
+            <remote-alias>2008-09 Writing\2_</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Percent of graduates taking SAT, 2007-08\1_</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Percent of graduates taking SAT, 2007-08\1_ (Table 1461)]</local-name>
+            <parent-name>[Table 1461]</parent-name>
+            <remote-alias>Percent of graduates taking SAT, 2007-08\1_</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Percent of graduates taking SAT, 2008-09\1_</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Percent of graduates taking SAT, 2008-09\1_ (Table 1461)]</local-name>
+            <parent-name>[Table 1461]</parent-name>
+            <remote-alias>Percent of graduates taking SAT, 2008-09\1_</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='2005-06 Writing\2  (Table 1461)' datatype='integer' name='[2005-06 Writing\2_ (Table 1461)]' role='measure' type='quantitative' />
+      <column caption='2007-08 Writing\2  (Table 1461)' datatype='integer' name='[2007-08 Writing\2_ (Table 1461)]' role='measure' type='quantitative' />
+      <column caption='2008-09 Writing\2  (Table 1461)' datatype='integer' name='[2008-09 Writing\2_ (Table 1461)]' role='measure' type='quantitative' />
+      <column caption='US_Reading_Score' datatype='real' name='[Calculation_347621643286396928]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='' />
+      </column>
+      <column caption='Percent of graduates taking SAT, 2007-08\1  (Table 1461)' datatype='integer' name='[Percent of graduates taking SAT, 2007-08\1_ (Table 1461)]' role='measure' type='quantitative' />
+      <column caption='Percent of graduates taking SAT, 2008-09\1  (Table 1461)' datatype='integer' name='[Percent of graduates taking SAT, 2008-09\1_ (Table 1461)]' role='measure' type='quantitative' />
+      <column datatype='string' name='[State or jurisdiction (Table 1461)]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column datatype='string' name='[State or jurisdiction]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <_.fcp.ObjectModelTableType.true...column caption='Table 146' datatype='table' name='[__tableau_internal_object_id__].[Table 146_BCEF6FD6B03C47C799C78A1A376468E0]' role='measure' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Table 146' id='Table 146_BCEF6FD6B03C47C799C78A1A376468E0'>
+            <properties context=''>
+              <relation join='full' type='join'>
+                <clause type='join'>
+                  <expression op='='>
+                    <expression op='[Table 146].[State or jurisdiction]' />
+                    <expression op='[Table 1461].[State or jurisdiction]' />
+                  </expression>
+                </clause>
+                <relation connection='excel-direct.1jjvr9808tfcr51fj7fmo1629lv8 (copy)' name='Table 146' table='[&apos;Table 146$&apos;]' type='table'>
+                  <columns gridOrigin='A1:R72:no:A1:R72:4' header='yes' lost='0' outcome='1' processed='902'>
+                    <column datatype='string' name='State or jurisdiction' ordinal='0' />
+                    <column datatype='integer' name='1987-88 Critical reading' ordinal='1' />
+                    <column datatype='integer' name='1987-88 Mathe- matics' ordinal='2' />
+                    <column datatype='integer' name='1995-96 Critical reading' ordinal='3' />
+                    <column datatype='integer' name='1995-96 Mathe- matics' ordinal='4' />
+                    <column datatype='integer' name='2000-01 Critical reading' ordinal='5' />
+                    <column datatype='integer' name='2000-01 Mathe- matics' ordinal='6' />
+                    <column datatype='integer' name='2005-06 Critical reading' ordinal='7' />
+                    <column datatype='integer' name='2005-06 Mathe- matics' ordinal='8' />
+                    <column datatype='integer' name='2005-06 Writing\2_' ordinal='9' />
+                    <column datatype='integer' name='2007-08 Critical reading' ordinal='10' />
+                    <column datatype='integer' name='2007-08 Mathe- matics' ordinal='11' />
+                    <column datatype='integer' name='2007-08 Writing\2_' ordinal='12' />
+                    <column datatype='integer' name='2008-09 Critical reading' ordinal='13' />
+                    <column datatype='integer' name='2008-09 Mathe- matics' ordinal='14' />
+                    <column datatype='integer' name='2008-09 Writing\2_' ordinal='15' />
+                    <column datatype='integer' name='Percent of graduates taking SAT, 2007-08\1_' ordinal='16' />
+                    <column datatype='integer' name='Percent of graduates taking SAT, 2008-09\1_' ordinal='17' />
+                  </columns>
+                </relation>
+                <relation connection='excel-direct.1jjvr9808tfcr51fj7fmo1629lv8 (copy)' name='Table 1461' table='[&apos;Table 146$&apos;]' type='table'>
+                  <columns gridOrigin='A1:R72:no:A1:R72:4' header='yes' lost='0' outcome='1' processed='902'>
+                    <column datatype='string' name='State or jurisdiction' ordinal='0' />
+                    <column datatype='integer' name='1987-88 Critical reading' ordinal='1' />
+                    <column datatype='integer' name='1987-88 Mathe- matics' ordinal='2' />
+                    <column datatype='integer' name='1995-96 Critical reading' ordinal='3' />
+                    <column datatype='integer' name='1995-96 Mathe- matics' ordinal='4' />
+                    <column datatype='integer' name='2000-01 Critical reading' ordinal='5' />
+                    <column datatype='integer' name='2000-01 Mathe- matics' ordinal='6' />
+                    <column datatype='integer' name='2005-06 Critical reading' ordinal='7' />
+                    <column datatype='integer' name='2005-06 Mathe- matics' ordinal='8' />
+                    <column datatype='integer' name='2005-06 Writing\2_' ordinal='9' />
+                    <column datatype='integer' name='2007-08 Critical reading' ordinal='10' />
+                    <column datatype='integer' name='2007-08 Mathe- matics' ordinal='11' />
+                    <column datatype='integer' name='2007-08 Writing\2_' ordinal='12' />
+                    <column datatype='integer' name='2008-09 Critical reading' ordinal='13' />
+                    <column datatype='integer' name='2008-09 Mathe- matics' ordinal='14' />
+                    <column datatype='integer' name='2008-09 Writing\2_' ordinal='15' />
+                    <column datatype='integer' name='Percent of graduates taking SAT, 2007-08\1_' ordinal='16' />
+                    <column datatype='integer' name='Percent of graduates taking SAT, 2008-09\1_' ordinal='17' />
+                  </columns>
+                </relation>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Box Plot'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='education' name='federated.187d6zk1th46pa1fr87351pfejfm' />
+          </datasources>
+          <datasource-dependencies datasource='federated.187d6zk1th46pa1fr87351pfejfm'>
+            <column-instance column='[reading]' derivation='None' name='[none:reading:qk]' pivot='key' type='quantitative' />
+            <column caption='Reading' datatype='integer' name='[reading]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <reference-line axis-column='[federated.187d6zk1th46pa1fr87351pfejfm].[none:reading:qk]' boxplot-mark-exclusion='false' boxplot-whisker-type='standard' enable-instant-analytics='true' formula='average' id='refline0' label-type='automatic' probability='95' scope='per-cell' symmetric='false' value-column='[federated.187d6zk1th46pa1fr87351pfejfm].[none:reading:qk]' z-order='1' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.187d6zk1th46pa1fr87351pfejfm].[none:reading:qk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{5F9E4650-8DC9-4846-8C9F-E5ABBB1C82B0}' />
+    </worksheet>
+    <worksheet name='Bullet-All'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>1987-88 Reading Scores compared to Math Scores</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Table 146' name='federated.1dw5wft07tsx6i1927ux21jmp63m (copy)' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1dw5wft07tsx6i1927ux21jmp63m (copy)'>
+            <column datatype='integer' name='[1987-88 Critical reading]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[1987-88 Mathe- matics]' role='measure' type='quantitative' />
+            <column datatype='string' name='[State or jurisdiction (Table 1461)]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column datatype='string' name='[State or jurisdiction]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[State or jurisdiction (Table 1461)]' derivation='None' name='[none:State or jurisdiction (Table 1461):nk]' pivot='key' type='nominal' />
+            <column-instance column='[State or jurisdiction]' derivation='None' name='[none:State or jurisdiction:nk]' pivot='key' type='nominal' />
+            <column-instance column='[1987-88 Critical reading]' derivation='Sum' name='[sum:1987-88 Critical reading:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[1987-88 Mathe- matics]' derivation='Sum' name='[sum:1987-88 Mathe- matics:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1dw5wft07tsx6i1927ux21jmp63m (copy)].[none:State or jurisdiction:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:State or jurisdiction:nk]' member='&quot;   United States .....&quot;' />
+              <groupfilter function='member' level='[none:State or jurisdiction:nk]' member='&quot;Illinois ......................&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1dw5wft07tsx6i1927ux21jmp63m (copy)].[none:State or jurisdiction:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='refline'>
+            <format attr='stroke-color' id='refline0' value='#000000' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='div-level' scope='rows' value='10' />
+            <format attr='div-level' scope='cols' value='10' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.1dw5wft07tsx6i1927ux21jmp63m (copy)].[sum:1987-88 Mathe- matics:qk]' />
+            </encodings>
+            <reference-line axis-column='[federated.1dw5wft07tsx6i1927ux21jmp63m (copy)].[sum:1987-88 Critical reading:qk]' enable-instant-analytics='true' formula='average' id='refline0' label-type='none' probability='95' scope='per-cell' value-column='[federated.1dw5wft07tsx6i1927ux21jmp63m (copy)].[sum:1987-88 Mathe- matics:qk]' z-order='2' />
+            <reference-line axis-column='[federated.1dw5wft07tsx6i1927ux21jmp63m (copy)].[sum:1987-88 Critical reading:qk]' enable-instant-analytics='true' fill-above='true' fill-below='true' formula='average' id='refline1' label-type='none' percentage-bands='true' probability='95' scope='per-cell' symmetric='false' value-column='[federated.1dw5wft07tsx6i1927ux21jmp63m (copy)].[sum:1987-88 Mathe- matics:qk]' z-order='1'>
+              <reference-line-value percentage='60' />
+              <reference-line-value percentage='80' />
+            </reference-line>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1dw5wft07tsx6i1927ux21jmp63m (copy)].[none:State or jurisdiction (Table 1461):nk]</rows>
+        <cols>[federated.1dw5wft07tsx6i1927ux21jmp63m (copy)].[sum:1987-88 Critical reading:qk]</cols>
+      </table>
+      <simple-id uuid='{4D568C31-F25C-4DBF-84B7-99A656CFD482}' />
+    </worksheet>
+    <worksheet name='Histogram'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Histogram</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='education' name='federated.187d6zk1th46pa1fr87351pfejfm' />
+          </datasources>
+          <datasource-dependencies datasource='federated.187d6zk1th46pa1fr87351pfejfm'>
+            <column aggregation='None' datatype='integer' name='[Reading (bin)]' role='dimension' type='quantitative'>
+              <calculation class='bin' decimals='1' formula='[reading]' peg='0' size='12.3' />
+            </column>
+            <column-instance column='[reading]' derivation='Count' name='[cnt:reading:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Reading (bin)]' derivation='None' name='[none:Reading (bin):qk]' pivot='key' type='quantitative' />
+            <column caption='Reading' datatype='integer' name='[reading]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.187d6zk1th46pa1fr87351pfejfm].[none:Reading (bin):qk]' scope='cols' value='Reading Scores' />
+            <format attr='title' class='0' field='[federated.187d6zk1th46pa1fr87351pfejfm].[cnt:reading:qk]' scope='rows' value='' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+          </pane>
+        </panes>
+        <rows>[federated.187d6zk1th46pa1fr87351pfejfm].[cnt:reading:qk]</rows>
+        <cols>[federated.187d6zk1th46pa1fr87351pfejfm].[none:Reading (bin):qk]</cols>
+        <show-full-range>
+          <column>[federated.187d6zk1th46pa1fr87351pfejfm].[Reading (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{03B8528C-79F1-43B8-A99F-4A30986770F9}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Dashboard'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='2' w='100000' x='0' y='0'>
+          <zone h='49000' id='1' name='Box Plot' w='98400' x='800' y='50000'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='24500' id='3' name='Histogram' w='98400' x='800' y='25500'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='24500' id='4' name='Bullet-All' w='98400' x='800' y='1000'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <simple-id uuid='{A3CD36CB-E75F-4466-9D7A-7ADE64D0FE0B}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.25' source-height='89'>
+    <window class='worksheet' name='Histogram'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{19F31A41-050E-4732-ABAC-2A5EF6C63F18}' />
+    </window>
+    <window class='worksheet' name='Box Plot'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{81273E6C-5B00-49E9-B726-A114EA819197}' />
+    </window>
+    <window class='worksheet' name='Bullet-All'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1dw5wft07tsx6i1927ux21jmp63m (copy)].[none:State or jurisdiction (Table 1461):nk]</field>
+            <field>[federated.1dw5wft07tsx6i1927ux21jmp63m (copy)].[none:State or jurisdiction:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{5357AB87-2B57-45B1-96B6-0F2FACE930F1}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard'>
+      <viewpoints>
+        <viewpoint name='Box Plot'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Bullet-All' />
+        <viewpoint name='Histogram'>
+          <zoom type='entire-view' />
+          <selection-collection>
+            <tuple-selection>
+              <tuple-reference>
+                <tuple-descriptor>
+                  <pane-descriptor>
+                    <x-fields>
+                      <field>[federated.187d6zk1th46pa1fr87351pfejfm].[none:Reading (bin):qk]</field>
+                    </x-fields>
+                    <y-fields>
+                      <field>[federated.187d6zk1th46pa1fr87351pfejfm].[cnt:reading:qk]</field>
+                    </y-fields>
+                  </pane-descriptor>
+                  <columns>
+                    <field>[federated.187d6zk1th46pa1fr87351pfejfm].[cnt:reading:qk]</field>
+                    <field>[federated.187d6zk1th46pa1fr87351pfejfm].[none:Reading (bin):qk]</field>
+                  </columns>
+                </tuple-descriptor>
+                <tuple>
+                  <value>6</value>
+                  <value>47</value>
+                </tuple>
+              </tuple-reference>
+              <tuple-reference>
+                <tuple-descriptor>
+                  <pane-descriptor>
+                    <x-fields>
+                      <field>[federated.187d6zk1th46pa1fr87351pfejfm].[none:Reading (bin):qk]</field>
+                    </x-fields>
+                    <y-fields>
+                      <field>[federated.187d6zk1th46pa1fr87351pfejfm].[cnt:reading:qk]</field>
+                    </y-fields>
+                  </pane-descriptor>
+                  <columns>
+                    <field>[federated.187d6zk1th46pa1fr87351pfejfm].[cnt:reading:qk]</field>
+                    <field>[federated.187d6zk1th46pa1fr87351pfejfm].[none:Reading (bin):qk]</field>
+                  </columns>
+                </tuple-descriptor>
+                <tuple>
+                  <value>7</value>
+                  <value>46</value>
+                </tuple>
+              </tuple-reference>
+              <tuple-reference>
+                <tuple-descriptor>
+                  <pane-descriptor>
+                    <x-fields>
+                      <field>[federated.187d6zk1th46pa1fr87351pfejfm].[none:Reading (bin):qk]</field>
+                    </x-fields>
+                    <y-fields>
+                      <field>[federated.187d6zk1th46pa1fr87351pfejfm].[cnt:reading:qk]</field>
+                    </y-fields>
+                  </pane-descriptor>
+                  <columns>
+                    <field>[federated.187d6zk1th46pa1fr87351pfejfm].[cnt:reading:qk]</field>
+                    <field>[federated.187d6zk1th46pa1fr87351pfejfm].[none:Reading (bin):qk]</field>
+                  </columns>
+                </tuple-descriptor>
+                <tuple>
+                  <value>3</value>
+                  <value>45</value>
+                </tuple>
+              </tuple-reference>
+              <tuple-reference>
+                <tuple-descriptor>
+                  <pane-descriptor>
+                    <x-fields>
+                      <field>[federated.187d6zk1th46pa1fr87351pfejfm].[none:Reading (bin):qk]</field>
+                    </x-fields>
+                    <y-fields>
+                      <field>[federated.187d6zk1th46pa1fr87351pfejfm].[cnt:reading:qk]</field>
+                    </y-fields>
+                  </pane-descriptor>
+                  <columns>
+                    <field>[federated.187d6zk1th46pa1fr87351pfejfm].[cnt:reading:qk]</field>
+                    <field>[federated.187d6zk1th46pa1fr87351pfejfm].[none:Reading (bin):qk]</field>
+                  </columns>
+                </tuple-descriptor>
+                <tuple>
+                  <value>1</value>
+                  <value>44</value>
+                </tuple>
+              </tuple-reference>
+            </tuple-selection>
+          </selection-collection>
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{6377A2C0-150B-48D4-92D0-3B799C229861}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Box Plot' width='132'>
+      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
+      Pl0FEZ7u9AAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='127' name='Bullet-All' width='192'>
+      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
+      rkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='Dashboard' width='192'>
+      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
+      RrgBpJsAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='Histogram' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>

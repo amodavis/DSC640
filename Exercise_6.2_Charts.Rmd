@@ -1,0 +1,115 @@
+---
+title: "DSC640 Week 11-12 Assignment"
+author: "Amie Davis"
+date: "13 November, 2020"
+output:
+  html_document:
+    df_print: paged
+  html_notebook: default
+  word_document: default
+---
+
+# Load and Prep Data
+```{r}
+#install.packages("readr")
+#install.packages("readxl")
+library(readr)
+library(readxl)
+
+# Education Stats
+edu_df <- read_csv("ex6-2/education.csv")
+head(edu_df)
+
+# SAT Scores
+# Start on the 4th row
+sat_df <- read_excel("ex6-2/tabn146.xls", skip=3)
+
+# Rename Columns
+colnames(sat_df)[1] <- "state"
+colnames(sat_df)[2] <- "reading_87_88"
+colnames(sat_df)[3] <- "math_87_88"
+colnames(sat_df)[4] <- "reading_95_96"
+colnames(sat_df)[5] <- "math_95_96"
+colnames(sat_df)[6] <- "reading_00_01"
+colnames(sat_df)[7] <- "math_00_01"
+colnames(sat_df)[8] <- "reading_05_06"
+colnames(sat_df)[9] <- "math_05_06"
+colnames(sat_df)[10] <- "writing_05_06"
+colnames(sat_df)[11] <- "reading_07_07"
+colnames(sat_df)[12] <- "math_07_08"
+colnames(sat_df)[13] <- "writing_07_08"
+colnames(sat_df)[14] <- "reading_08_09"
+colnames(sat_df)[15] <- "math_08_09"
+colnames(sat_df)[16] <- "writing_08_09"
+colnames(sat_df)[17] <- "pct_07_08"
+colnames(sat_df)[18] <- "pct_08_09"
+
+# Remove rows wo data
+sat_df <- sat_df[-c(2), ]
+sat_data <- subset(sat_df, state != 'NA')
+
+head(sat_data,20)
+
+```
+
+# 1) Histogram
+```{r}
+# Load Packages
+library(ggplot2)
+
+ggplot(edu_df, aes(x=reading)) +
+    geom_histogram(bins=20, color="dark blue", fill="dark blue") +
+    labs(title="Histogram", x="Reading Score", y=element_blank()) +
+    theme(axis.text.x = element_text()) +
+
+  # Remove background and grid
+    theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+          panel.background = element_blank(), axis.line = element_blank())
+```
+
+# 2) Box Plot
+
+```{r, message=FALSE}
+  
+ggplot(edu_df, aes(y=reading)) + 
+    geom_boxplot(fill="blue", alpha=0.3) + 
+    ggtitle("Reading Scores") +
+    ylab("") +
+
+    # Remove background and grid
+    theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+          panel.background = element_blank(), axis.line = element_blank(),
+          axis.text.x=element_blank(), axis.ticks.x=element_blank())
+
+```
+
+# 3) Bullet Chart
+```{r message=FALSE}
+# Load Packages
+library(plotly)
+
+# Pull records for plot
+us_rec <- subset(sat_data, state == 'United States .....')
+il_rec <- subset(sat_data, state == 'Illinois ......................')
+
+fig <- plot_ly(
+  type = "indicator",
+  mode = "number+gauge+delta",
+  value = il_rec$reading_87_88,
+  delta = list(reference = us_rec$reading_87_88),
+  title= list(text = "<b>Illinois</b>"),
+  gauge = list(
+    shape = "bullet",
+    bar = list(color = "blue"),
+    axis = list(range = list(NULL, 800)),
+    steps = list(
+      list(range = c(0, us_rec$reading_87_88), 
+           color = "lightgray"))),
+  height = 150, width = 600) 
+
+# Add titles & stacks
+fig <- fig %>% layout(title = "Reading Score Compared to US Average", margin = list(l = 150))
+
+
+fig
+```
